@@ -23,8 +23,8 @@ class Arrays {
 
 		//находим максимальное и минимальное значение в МАссиве
 		int min, max;
-		min = max = num[0];
-		for(int i = 1; i < nums.lenght; i++) {
+		min = max = nums[0];
+		for(int i = 1; i < nums.length; i++) {
 			if(nums[i] < min) min = nums[i];
 			if(nums[i] > max) max = nums[i];
 		}
@@ -34,8 +34,8 @@ class Arrays {
 		//альтернативная форма инциализации массива
 		int x = 10;
 		int[] nums1 = {32,-42,1132,53,124,94,x,-522,-10};
-		min = max = num[0];
-                for(int i = 1; i < nums.lenght; i++) {
+		min = max = nums[0];
+                for(int i = 1; i < nums.length; i++) {
                         if(nums[i] < min) min = nums1[i];
                         if(nums[i] > max) max = nums1[i];
                 }
@@ -67,21 +67,21 @@ class Arrays {
 			for(int k=0; k<10; k++)
 				riders[i][k] = i + k + 10;
 		for(int i=5; i<7; i++)
-			for(int k=0; k=2; k++)
-				riders[j][k] = i +k + 10;
+			for(int k=0; k<2; k++)
+				riders[i][k] = i + k + 10;
 
 		//вывод массива
 		System.out.println("перевезено пассажиров в будние дни ");
 		for(int i=0; i < 5; i++) {
 			for(int k=0; k<10; k++)
-				System.out.println(riders[j][k]+ " ");
+				System.out.print(riders[i][k] + " ");
 			System.out.println();
 		}
 		System.out.println();
 		System.out.println("перевезено пассажиров в vyxod дни ");
 		for(int i=5; i<7; i++) {
 			for(int k=0; k<2; k++)
-				System.out.println(riders[j][k] + " ");
+				System.out.println(riders[i][k] + " ");
 			System.out.println();
 		}
 		System.out.println();
@@ -161,13 +161,13 @@ class Arrays {
 			{6,7,8,9},
 			{0}
 		};
-		System.out.println("длина list" + list.lenght);
-		System.out.println("длина nums4" + nums4.lenght);
-		System.out.println("длина table1" + table1.lenght);
-		System.out.println("длина table[0]" + table[0].lenght);
-		System.out.println("длина table1[1]" + table1[1].lenght);
-		System.out.println("длина table1[2]" + table1[2].lenght);
-		System.out.println("длина table1[3]" + table1[3].lenght);
+		System.out.println("длина list" + list.length);
+		System.out.println("длина nums4" + nums4.length);
+		System.out.println("длина table1" + table1.length);
+		System.out.println("длина table[0]" + table[0].length);
+		System.out.println("длина table1[1]" + table1[1].length);
+		System.out.println("длина table1[2]" + table1[2].length);
+		System.out.println("длина table1[3]" + table1[3].length);
 	}
 
 }
