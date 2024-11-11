@@ -35,7 +35,7 @@ class Arrays {
 		int x = 10;
 		int[] nums1 = {32,-42,1132,53,124,94,x,-522,-10};
 		min = max = nums[0];
-                for(int i = 1; i < nums.length; i++) {
+                for(int i = 1; i < nums1.length; i++) {
                         if(nums[i] < min) min = nums1[i];
                         if(nums[i] > max) max = nums1[i];
                 }
@@ -168,6 +168,52 @@ class Arrays {
 		System.out.println("длина table1[1]" + table1[1].length);
 		System.out.println("длина table1[2]" + table1[2].length);
 		System.out.println("длина table1[3]" + table1[3].length);
+
+		//цикл for.each
+		System.out.println();
+		int[] nums5 = {1,2,3,4,5,6,7,8,9,10,11,12};
+		int sum = 0;
+
+		for(int x1 : nums) {
+			System.out.println("значение: " + x1);
+			sum += x1;
+			if(x1 == 5)
+				break;
+		}
+		System.out.println("сумма первых шести элемнетов массива намс5:" + sum);
+		
+		System.out.println();
+		//подсчет суммы элементов в двумерном массиве
+		int sum1 = 0;
+		int[][] nums6 = new int[3][5];
+
+		for(int i = 0; i<nums6.length; i++)
+			for(int j1=0; j1<nums6[i].length; j1++)
+				nums6[i][j1] = (i +1)*(j1+1);
+
+		//выводим элементы массива и считаем сумму
+		for(int[] x1 : nums6)
+			for(int y : x1) {
+				System.out.println("знавчение:" + y);
+				sum += y;
+			}
+		System.out.println("сумма:" + sum1);
+
+		System.out.println();
+		//поиск при помощи цикла "for-each"
+		int val = 9;
+		boolean found = false;
+
+		for(int x1 : nums5) {
+			if(x1 == val) {
+				found = true;
+				break;
+			}	
+		}
+		if(found)
+			System.out.println("значение" + val + " найдено");
+		else
+			System.out.println("znachenie" + val + " ne naideno");
 	}
 
 }
