@@ -19,7 +19,7 @@ class FailSoftArray {
 	private int errval;
 	public int length;
 	
-	public FailSoftArray(int size, int errval) {
+	public FailSoftArray(int size, int errv) {
 	a = new int[size];
 	errval = errv;
 	length = size;
@@ -55,7 +55,7 @@ class Modif {
 
 		//
 		System.out.println();
-		FallSoftArray fs = new FallSoftArray(5, -1);
+		FailSoftArray fs = new FailSoftArray(5, -1);
 		int x;
 
 		System.out.println("вывод значений без сообщений об ошибках");
@@ -70,7 +70,7 @@ class Modif {
 		
 		System.out.println("сообщаем об ошибках");
                 for(int i = 0; i < (fs.length * 2); i++)
-                        if(fs.put(i, i*10));
+                        if(fs.put(i, i*10))
 				System.out.println("индекс" + i + "выходит за границы массива");
                 for(int i=0; i < (fs.length * 2); i++) {
                         x= fs.get(i);
